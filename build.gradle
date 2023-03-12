@@ -24,6 +24,10 @@ allprojects {
     apply plugin: "io.spring.dependency-management"
     dependencyManagement {
         dependencies {
+            imports {
+                mavenBom("org.springframework.boot:spring-boot-dependencies:2.5.2")
+            }
+
             dependency("com.google.guava:guava:${Versions.guava}")
         }
     }
@@ -38,6 +42,4 @@ allprojects {
     }
 }
 
-// TODO
-// finish build.gradle
-// guava
+// TODO finish build.gradle
